@@ -15,6 +15,8 @@ function generatePassword() {
   console.log(Special);
 }
 
+// heloo test
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
