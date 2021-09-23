@@ -24,6 +24,28 @@
             aria-label="Generated Password"
           ></textarea>
         </div>
+        <h3>Password Options:</h3>
+        <p>
+          <label for="Length">Password length</label>
+          <!-- This element has a CSS declaration of `cursor: text` -->
+          <input id="Length" type="text" placeholder="100" />
+        </p>
+        <p>
+          <input class="checkbox" id="Uppercase" type="checkbox" />
+          <label for="Uppercase">Use Upper Case Characters</label>
+        </p>
+        <p>
+          <input class="checkbox" id="Lowercase" type="checkbox" />
+          <label for="Lowercase"> Use lower case Characters</label>
+        </p>
+        <p>
+          <input class="checkbox" id="Numbers" type="checkbox" />
+          <label for="Numbers">Use Numbers</label>
+        </p>
+        <p>
+          <input class="checkbox" id="Special" type="checkbox" />
+          <label for="Special">Use Special Characters</label>
+        </p>
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
         </div>
