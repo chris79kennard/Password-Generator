@@ -13,7 +13,7 @@
 
 # screen shot
 
-![Password Generator page](assets\css\images\screencapture-chris79kennard-github-io-Password-Generator-2021-09-23-19_09_04.png)
+![Password Generator page](assets\css\images\screenshot.png)
 
 # links
 
