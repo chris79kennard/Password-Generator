@@ -13,7 +13,7 @@
 
 # screen shot
 
-![Password Generator page](assets\css\images\screenshot.png)
+![Generator_ScreenShot](screen_shot/Generator.png)
 
 # links
 
