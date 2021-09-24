@@ -1,4 +1,4 @@
-// Create arrays of characters
+// Create arrays of characters ie. NumberChars, UpperChars, LowerChars ect.
 var newRandomChar = "";
 var newPassword = "";
 var passwordChars = [];
