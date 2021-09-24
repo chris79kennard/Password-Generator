@@ -25,11 +25,21 @@
           ></textarea>
         </div>
         <h3>Password Options:</h3>
+        <error id="notAnIntegerError">Please enter an integer.</error>
+        <error id="lengthError" hidden="true">
+          Password Length should be between 8 and 128 Characters
+        </error>
+
         <p>
           <label for="Length">Password length</label>
           <!-- This element has a CSS declaration of `cursor: text` -->
           <input id="Length" type="text" placeholder="8-120 Character limit" />
         </p>
+        <error id="NoCharacterSelectedError" hidden="true">
+          You need to select at least one of the following character options
+          below.
+        </error>
+
         <p>
           <input class="checkbox" id="Uppercase" type="checkbox" />
           <label for="Uppercase">Use Upper Case Characters</label>

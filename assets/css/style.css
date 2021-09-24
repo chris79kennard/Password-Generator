@@ -54,6 +54,15 @@ header {
   min-height: 100px;
 }
 
+error {
+  color: red;
+}
+
+error:after {
+  content: "\a";
+  white-space: pre;
+}
+
 .card-footer {
   text-align: center;
 }

@@ -1,7 +1,4 @@
 // Create arrays of characters ie. NumberChars, UpperChars, LowerChars ect.
-var newRandomChar = "";
-var newPassword = "";
-var passwordChars = [];
 var numberChars = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var upperChars = [
   "A",
@@ -63,41 +60,49 @@ var specialChars = ["!", "@", "#", "$", "%", "^", "&", "*"];
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
+var lengthError = document.querySelector("#lengthError");
+var NoCharacterSelectedError = document.querySelector(
+  "#NoCharacterSelectedError"
+);
 function generatePassword() {
   var Length = document.querySelector("#Length").value;
-  console.log(Length);
 
   var Uppercase = document.querySelector("#Uppercase").checked;
-  console.log(Uppercase);
 
   var Lowercase = document.querySelector("#Lowercase").checked;
-  console.log(Lowercase);
 
   var Numbers = document.querySelector("#Numbers").checked;
-  console.log(Numbers);
 
   var Special = document.querySelector("#Special").checked;
-  console.log(Special);
+
+  var invalidLength = Length < 8 || Length > 128;
+  var atLeastOneCharChecked = Uppercase || Lowercase || Numbers || Special;
+
+  lengthError.hidden = !invalidLength;
+  NoCharacterSelectedError.hidden = atLeastOneCharChecked;
+  if (!atLeastOneCharChecked || invalidLength) {
+    return "Invalid Options. Correct issues below";
+  }
+
+  var newRandomChar = "";
+  var newPassword = "";
+  var passwordChars = [];
+
   if (Uppercase) {
     passwordChars = passwordChars.concat(upperChars);
   }
-  console.log(passwordChars);
 
   if (Lowercase) {
     passwordChars = passwordChars.concat(lowerChars);
   }
-  console.log(passwordChars);
 
   if (Numbers) {
     passwordChars = passwordChars.concat(numberChars);
   }
-  console.log(passwordChars);
 
   if (Special) {
     passwordChars = passwordChars.concat(specialChars);
   }
-  console.log(passwordChars);
 
   for (i = 0; i < Length; i++) {
     var index = Math.floor(Math.random() * passwordChars.length);
@@ -114,7 +119,6 @@ function writePassword() {
 
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-  console.log(passwordText.value);
 }
 
 // Add event listener to generate button
