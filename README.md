@@ -14,6 +14,7 @@
 # screen shot
 
 ![Generator_ScreenShot](screen_shot/Generator.png)
+![Generator_ScreenShot_Error](screen_shot/Error.png)
 
 # links
 
